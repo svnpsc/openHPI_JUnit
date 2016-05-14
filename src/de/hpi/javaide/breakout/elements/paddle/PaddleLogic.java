@@ -13,5 +13,14 @@ class PaddleLogic {
 	PaddleLogic(PaddleData data) {
 		this.data = data;
 	}
+
+	public Point getCenter() {
+		return new Point(data.getX(), data.getY());
+	}
+
+	public void move(int toX, int fromX) {
+		data.setPosition(new Point(toX, data.getY()));
+	}
+
 	//TODO hier fehlt noch was
 }

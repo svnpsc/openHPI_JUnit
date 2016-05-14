@@ -16,9 +16,10 @@ public class Paddle implements Collideable, Displayable, Moveable, Geometric {
 	
 	public static final int WIDTH = 0;
 	public static final int HEIGHT = 0;
+	private PaddleLogic logic;
 	
 	public Paddle(PaddleLogic paddleLogic, PaddleDisplay paddleDisplay) {
-		
+		this.logic = paddleLogic;
 	}
 
 	//collideal
@@ -48,8 +49,7 @@ public class Paddle implements Collideable, Displayable, Moveable, Geometric {
 
 	@Override
 	public Point getCenter() {
-		// TODO Auto-generated method stub
-		return null;
+		return logic.getCenter();
 	}
 
 	//Geometric
@@ -73,8 +73,7 @@ public class Paddle implements Collideable, Displayable, Moveable, Geometric {
 
 	@Override
 	public void move(int x, int y) {
-		// TODO Auto-generated method stub
-		
+		logic.move(x, y);
 	}	
 	
 	//Displayable
