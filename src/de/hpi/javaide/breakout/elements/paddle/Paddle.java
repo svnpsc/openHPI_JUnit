@@ -68,7 +68,7 @@ public class Paddle implements Collideable, Displayable, Moveable, Geometric {
 	//Moveable
 	@Override
 	public double getSpeed() {
-		return Game.INITIAL_SPEED;
+		return logic.getSpeed();
 	}
 
 	@Override

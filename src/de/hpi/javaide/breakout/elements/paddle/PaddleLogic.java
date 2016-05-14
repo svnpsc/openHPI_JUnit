@@ -19,7 +19,12 @@ class PaddleLogic {
 	}
 
 	public void move(int toX, int fromX) {
+		data.changeSpeed(Math.abs(toX - fromX));
 		data.setPosition(new Point(toX, data.getY()));
+	}
+
+	public double getSpeed() {
+		return data.getSpeed();
 	}
 
 	//TODO hier fehlt noch was
