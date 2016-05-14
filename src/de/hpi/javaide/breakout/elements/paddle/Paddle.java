@@ -14,8 +14,8 @@ public class Paddle implements Collideable, Displayable, Moveable, Geometric {
 	//TODO implement the paddle's methods
 	//Hint: Many of them are just delegating to the logic or the display
 	
-	public static final int WIDTH = 0;
-	public static final int HEIGHT = 0;
+	public static final int WIDTH = 75;
+	public static final int HEIGHT = 15;
 	private PaddleLogic logic;
 	
 	public Paddle(PaddleLogic paddleLogic, PaddleDisplay paddleDisplay) {
