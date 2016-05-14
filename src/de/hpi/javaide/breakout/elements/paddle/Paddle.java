@@ -7,6 +7,7 @@ import de.hpi.javaide.breakout.interfaces.Collideable;
 import de.hpi.javaide.breakout.interfaces.Displayable;
 import de.hpi.javaide.breakout.interfaces.Geometric;
 import de.hpi.javaide.breakout.interfaces.Moveable;
+import de.hpi.javaide.breakout.starter.Game;
 
 public class Paddle implements Collideable, Displayable, Moveable, Geometric {
 	
@@ -67,8 +68,7 @@ public class Paddle implements Collideable, Displayable, Moveable, Geometric {
 	//Moveable
 	@Override
 	public double getSpeed() {
-		// TODO Auto-generated method stub
-		return 0;
+		return Game.INITIAL_SPEED;
 	}
 
 	@Override
