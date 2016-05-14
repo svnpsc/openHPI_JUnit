@@ -2,6 +2,7 @@ package de.hpi.javaide.breakout.elements.paddle;
 
 import java.awt.Point;
 import java.awt.Shape;
+import java.awt.geom.Ellipse2D;
 import java.awt.geom.Rectangle2D;
 
 import de.hpi.javaide.breakout.starter.Game;
@@ -25,6 +26,10 @@ class PaddleLogic {
 
 	public double getSpeed() {
 		return data.getSpeed();
+	}
+
+	public boolean intersects(Shape shape) {
+		return shape.intersects((Rectangle2D) data.getGeometry());
 	}
 
 	//TODO hier fehlt noch was

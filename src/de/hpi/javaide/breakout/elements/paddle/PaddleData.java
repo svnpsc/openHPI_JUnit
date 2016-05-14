@@ -2,6 +2,7 @@ package de.hpi.javaide.breakout.elements.paddle;
 
 import java.awt.Dimension;
 import java.awt.Point;
+import java.awt.Shape;
 
 import de.hpi.javaide.breakout.basics.RectangleData;
 import de.hpi.javaide.breakout.starter.Game;
@@ -21,6 +22,10 @@ class PaddleData extends RectangleData {
 
 	public double getSpeed() {
 		return speed;
+	}
+
+	public Shape getGeometry() {
+		return this.geometry;
 	}
 	
 	//TODO this class just stores the data and provides access to it.

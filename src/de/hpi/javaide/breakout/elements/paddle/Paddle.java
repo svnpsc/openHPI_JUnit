@@ -61,8 +61,7 @@ public class Paddle implements Collideable, Displayable, Moveable, Geometric {
 
 	@Override
 	public boolean intersects(Shape shape) {
-		// TODO Auto-generated method stub
-		return false;
+		return logic.intersects(shape);
 	}
 
 	//Moveable
