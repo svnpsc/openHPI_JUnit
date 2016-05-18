@@ -49,7 +49,7 @@ public class PaddleTest {
 	
 	//This is already tested for the ball, but just to make sure.
 	@Test
-	public void itShapeShouldNotIntersectWithAnotherShapeWhenAtDifferentPositions() {
+	public void itShouldNotIntersectWithAnotherShapeWhenAtDifferentPositions() {
 		Ball ball = mock(Ball.class);
 		int ballSize = 30;
 		//put the mocked ball somewhere else
@@ -58,7 +58,7 @@ public class PaddleTest {
 	}
 
 	@Test
-	public void itShapeShouldIntersectWithAnotherShapeWhenAtTheSamePosition() {
+	public void itShouldIntersectWithAnotherShapeWhenAtTheSamePosition() {
 		Ball ball = mock(Ball.class);
 		int ballSize = 30;
 		//put the mocked ball on the brick
