@@ -49,18 +49,13 @@ public class PaddleTest {
 	
 	//This is already tested for the ball, but just to make sure.
 	@Test
-	public void itShouldNotIntersectWithAnotherShapeWhenAtDifferentPositions() {
+	public void itShapeShouldIntersectWithAnotherShapeWhenAtTheSamePosition() {
 		Ball ball = mock(Ball.class);
 		int ballSize = 30;
 		//put the mocked ball somewhere else
 		when(ball.getGeometry()).thenReturn(new Ellipse2D.Float(0, 0, ballSize, ballSize));
 		assertFalse("At this position ball should not intersect with brick.", paddle.intersects(ball.getGeometry()));
-	}
 
-	@Test
-	public void itShouldIntersectWithAnotherShapeWhenAtTheSamePosition() {
-		Ball ball = mock(Ball.class);
-		int ballSize = 30;
 		//put the mocked ball on the brick
 		when(ball.getGeometry()).thenReturn(new Ellipse2D.Float(Game.SCREEN_X / 2, Game.SCREEN_Y - 200, ballSize, ballSize));
 		assertTrue("At this position ball should intersect with brick.", paddle.intersects(ball.getGeometry()));
