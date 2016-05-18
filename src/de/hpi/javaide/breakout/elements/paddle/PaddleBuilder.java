@@ -17,9 +17,11 @@ public class PaddleBuilder implements Builder<Paddle> {
 	}
 	
 	public Paddle build() {
-		//TODO - do the wiring. Build the paddle from a Data, a Display, and Logic.
-		//In doubt, have a look at the implementation of the Ball or the Brick.  
-		return null;
+		Dimension size = new Dimension(Paddle.WIDTH, Paddle.HEIGHT);
+		PaddleData data = new PaddleData(position, size);
+		PaddleLogic logic = new PaddleLogic(data);
+		PaddleDisplay display = new PaddleDisplay(game, data);
+		return new Paddle(logic, display);
 	}
 
 }

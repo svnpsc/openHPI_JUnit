@@ -60,4 +60,5 @@ public class PaddleTest {
 		when(ball.getGeometry()).thenReturn(new Ellipse2D.Float(Game.SCREEN_X / 2, Game.SCREEN_Y - 200, ballSize, ballSize));
 		assertTrue("At this position ball should intersect with brick.", paddle.intersects(ball.getGeometry()));
 	}
+	
 }
